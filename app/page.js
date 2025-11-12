@@ -3,13 +3,14 @@ export default function Home() {
     <>
 
       <section id="home">
-        <h1>Your one-stop-shop for branding & website development!</h1>
+        <h1>Build Your Brand</h1>
         <h2>Services</h2>
+    
 
       </section>
 
       <section id="about">
-        <h1>Meet Your Developer</h1>
+        <h1>Meet Your Designer</h1>
       </section>
 
       <section id="contact">
