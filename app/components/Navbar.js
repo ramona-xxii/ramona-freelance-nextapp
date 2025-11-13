@@ -1,11 +1,17 @@
 export default function Navbar() {
     return (
-        <nav className="bg-[#1f48ff] w-full sticky top-0">
-            <ul className="flex flex-row">
-                <li className="p-2 text-white"><a href="#home">Ramona</a></li>
-                <li className="p-2 text-white"><a href="#about">About</a></li>
-                <li className="p-2 text-white"><a href="#contact">Contact</a></li>
-            </ul>
+        <nav className="bg-[#f2f2f2] w-full sticky top-0 h-fit">
+            <div className="flex px-2 items-center">
+                {/* left side */}
+                <div>
+                    <a href="#home" className="py-4 px-2">Ramona</a>
+                </div>
+                {/* right side */}
+                <div className="flex ml-auto">
+                    <a href="#about" className="py-4 px-2">About</a>
+                    <a href="#contact" className="py-4 px-2">Contact</a>
+                </div>
+            </div>
         </nav>
     );
 }
