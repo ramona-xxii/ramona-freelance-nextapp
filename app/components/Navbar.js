@@ -48,10 +48,10 @@ export default function Navbar() {
             </div>
             {/* mobile dropdown */}
             {menuOpen && (
-                <div className='sm:hidden flex flex-col ease-in duration-500'>
-                    <a href="#services" className="p-1">Services</a>
-                    <a href="#about" className="p-1">About</a>
-                    <a href="#contact" className="p-1">Contact</a>
+                <div className='sm:hidden flex flex-col'>
+                    <a href="#services" className="px-4 py-3 ms-auto" onClick={() => setMenuOpen(false)}>Services</a>
+                    <a href="#about" className="px-4 py-3 ms-auto" onClick={() => setMenuOpen(false)}>About</a>
+                    <a href="#contact" className="px-4 py-3 ms-auto" onClick={() => setMenuOpen(false)}>Contact</a>
                 </div>
             )}
         </nav>
