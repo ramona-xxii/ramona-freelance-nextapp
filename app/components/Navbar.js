@@ -19,39 +19,40 @@ export default function Navbar() {
     return (
         <nav className="bg-[#f2f2f2] shadow-xl">
             {/* outer div*/}
-            <div className="flex justify-between items-center px-4 md:px-10 py-4 md:py-5 h-full w-full">
+            <div className="flex justify-between items-center px-5 sm:px-10 py-4 sm:py-5 h-full w-full">
                 {/* left side */}
-                <div className="justify-center">
+                <div className="justify-center w-40">
                     <a href="#home">
                         {/* logo */}
                         <Image 
                             src="/images/Northstar.png"
                             alt="Northstar studio logo"
-                            width={100}
-                            height={100}
+                            width={200}
+                            height={200}
+                            className='h-auto w-full'
                         />
                     </a>
                 </div>
                 {/* right side */}
                 <div className="hidden sm:flex justify-center">
                     {/* menu links */}
-                    <a href="#services" className="pl-6">Services</a>
-                    <a href="#about" className="pl-6">About</a>
-                    <a href="#contact" className="pl-6">Contact</a>
+                    <a href="#services" className="pr-10">SERVICES</a>
+                    <a href="#about" className="pr-10">ABOUT</a>
+                    <a href="#contact">CONTACT</a>
                 </div>
                 {/* hamburger menu */}
                 <div className='sm:hidden cursor-pointer'> 
                     <button type="button" onClick={toggleNavMenu}>
-                        <FontAwesomeIcon icon={ faBars } className='h-8 w-8'/>
+                        <FontAwesomeIcon icon={ faBars } size='2x'/>
                     </button>
                 </div>
             </div>
             {/* mobile dropdown */}
             {menuOpen && (
                 <div className='sm:hidden flex flex-col'>
-                    <a href="#services" className="px-4 py-3 ms-auto" onClick={() => setMenuOpen(false)}>Services</a>
-                    <a href="#about" className="px-4 py-3 ms-auto" onClick={() => setMenuOpen(false)}>About</a>
-                    <a href="#contact" className="px-4 py-3 ms-auto" onClick={() => setMenuOpen(false)}>Contact</a>
+                    <a href="#services" className="px-10 py-3 ms-auto" onClick={() => setMenuOpen(false)}>SERVICES</a>
+                    <a href="#about" className="px-10 py-3 ms-auto" onClick={() => setMenuOpen(false)}>ABOUT</a>
+                    <a href="#contact" className="px-10 py-3 ms-auto" onClick={() => setMenuOpen(false)}>CONTACT</a>
                 </div>
             )}
         </nav>
