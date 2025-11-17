@@ -8,8 +8,8 @@ export default function Home() {
       <section id="home" className="bg-blue-300">
         {/* hero display */}
         <div id="hero" className="flex-col pt-5 space-y-3">
-          <h1 className="flex justify-center text-3xl text-center">Build Your Brand with NorthStar Studio</h1>
-          <p className="flex justify-center text-lg text-center">Select Your Service To Get Started</p>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl text-center">Build Your Brand with NorthStar Studio</h1>
+          <p className="text-lg text-center">Select Your Service To Get Started</p>
         </div>
         <div id="services-grid" className="px-10 py-5">
           {/* services grid */}
@@ -35,12 +35,11 @@ export default function Home() {
           </div>
         </div>
         
-        
       </section>
 
       {/* ABOUT section */}
       <section id="about" className="bg-green-200">
-        <h1>About</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl text-center">Meet Your Developer</h1>
       </section>
 
       {/* CONTACT section */}
