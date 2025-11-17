@@ -2,35 +2,35 @@ export default function Home() {
   return (
     <>
     {/* site container */}
-    <div id="site-container" className="bg-blue-300 px-10">
+    <div id="site-container" className="bg-blue-200 px-10 py-10 space-y-10 sm:space-y-15 md:space-y-20">
 
       {/* HOME section */}
-      <section id="home" className="py-20">
+      <section id="home" className="bg-blue-300">
         {/* hero display */}
-        <div id="hero" className="flex-col">
+        <div id="hero" className="flex-col pt-5 space-y-3">
           <h1 className="flex justify-center text-3xl text-center">Build Your Brand with NorthStar Studio</h1>
-          <p className="flex justify-center text-2xl text-center">Select your service below</p>
+          <p className="flex justify-center text-lg text-center">Select Your Service To Get Started</p>
         </div>
-        <div id="services-grid" className="">
+        <div id="services-grid" className="px-10 py-5">
           {/* services grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* card 1 - logo */}
-            <div className="bg-purple-300">
-              <h1>Logo</h1>
+            <div className="bg-purple-300 rounded-lg px-5 py-4">
+              <h1 className="text-center text-base sm:text-lg md:text-xl">Logo</h1>
               <p>Make your brand pop with a catchy logo</p>
-              <button>Click Me</button>
+              <button className="w-full border border-black rounded-lg px-3 py-1.5">More Info</button>
             </div>
             {/* card 2 - business cards */}
-            <div className="bg-purple-300">
-              <h1>Business Cards</h1>
+            <div className="bg-purple-300 rounded-lg px-5 py-4">
+              <h1 className="text-center text-base sm:text-lg md:text-xl">Business Cards</h1>
               <p>Expand your client base with professional business cards</p>
-              <button>Click Me</button>
+              <button className="w-full border border-black rounded-lg px-3 py-1.5">More Info</button>
             </div>
             {/* card 3 - website */}
-            <div className="bg-purple-300">
-              <h1>Website</h1>
-              <p>Create a unique experience with a fuflly customized website</p>
-              <button>Click Me</button>
+            <div className="bg-purple-300 rounded-lg px-5 py-4">
+              <h1 className="text-center text-base sm:text-lg md:text-xl">Website</h1>
+              <p>Create a unique experience with a fully customized website</p>
+              <button className=" w-full border border-black rounded-lg px-3 py-1.5">More Info</button>
             </div>
           </div>
         </div>
@@ -39,7 +39,8 @@ export default function Home() {
       </section>
 
       {/* ABOUT section */}
-      <section id="about">
+      <section id="about" className="bg-green-200">
+        <h1>About</h1>
       </section>
 
       {/* CONTACT section */}
