@@ -1,12 +1,14 @@
 import Hero from "./components/Hero";
 import Section from "./components/Section";
+import Services from "./components/Services";
 
 export default function Home() {
   return (
     <>
     {/* site container */}
-    <div id="site-container" className="bg-blue-200 px-10 py-10 space-y-10 sm:space-y-15 md:space-y-20">
+    <div id="site-container" className="bg-blue-200 px-10">
       <Section><Hero /></Section>
+      <Section><Services /></Section>
 
       <section id="services">
         <div id="services-grid" className="px-10 py-5">
