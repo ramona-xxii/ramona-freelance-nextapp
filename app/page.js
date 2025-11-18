@@ -1,16 +1,14 @@
+import Hero from "./components/Hero";
+import Section from "./components/Section";
+
 export default function Home() {
   return (
     <>
     {/* site container */}
     <div id="site-container" className="bg-blue-200 px-10 py-10 space-y-10 sm:space-y-15 md:space-y-20">
+      <Section><Hero /></Section>
 
-      {/* HOME section */}
-      <section id="home" className="bg-blue-300 sm:pt-10 md:pt-15 lg:pt-20 xl:pt-25 2xl:pt-30">
-        {/* hero display */}
-        <div id="hero" className="flex-col pt-5 space-y-3">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl text-center">Build Your Brand with NorthStar Studio</h1>
-          <p className="text-lg md:text-xl text-center">Select Your Service To Get Started</p>
-        </div>
+      <section id="services">
         <div id="services-grid" className="px-10 py-5">
           {/* services grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -34,7 +32,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
       </section>
 
       {/* ABOUT section */}
@@ -47,7 +44,6 @@ export default function Home() {
       </section>
     </div>
       
-
     </>
   );
 }
