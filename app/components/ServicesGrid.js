@@ -10,7 +10,7 @@ export default function ServicesGrid() {
     ];
 
     return(
-        <div id="service-grid" className="grid justify-center gap-8 bg-pink-200"
+        <div id="service-grid" className="grid place-items-center justify-center gap-8 bg-pink-200"
         style={{ gridAutoFlow: 'row', gridTemplateColumns: 'repeat(auto-fit, 320px)' }}>
             {/* cycle through 'services' array for each element (curr element = service) */}
             {services.map((service) => (
