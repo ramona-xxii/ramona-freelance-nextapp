@@ -17,9 +17,9 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="bg-[#f2f2f2] shadow-xl">
+        <nav className="bg-[#f2f2f2] shadow-xl sticky top-0 h-12 sm:h-19">
             {/* outer div*/}
-            <div className="flex justify-between items-center px-5 sm:px-10 py-4 sm:py-5 h-full w-full">
+            <div className="flex justify-between items-center px-10 h-full w-full">
                 {/* left side */}
                 <div className="justify-center w-40">
                     <a href="#home">
@@ -29,7 +29,7 @@ export default function Navbar() {
                             alt="Northstar studio logo"
                             width={200}
                             height={200}
-                            className='h-auto w-full'
+                            className='h-full w-auto'
                         />
                     </a>
                 </div>
@@ -40,12 +40,13 @@ export default function Navbar() {
                     <a href="#about" className="pr-10">ABOUT</a>
                     <a href="#contact">CONTACT</a>
                 </div>
-                {/* hamburger menu */}
+                {/* hamburger menu - small desktop */}
                 <div className='sm:hidden cursor-pointer'> 
                     <button type="button" onClick={toggleNavMenu}>
-                        <FontAwesomeIcon icon={ faBars } size='2x'/>
+                        <FontAwesomeIcon icon={ faBars } size='xl'/>
                     </button>
                 </div>
+
             </div>
             {/* mobile dropdown */}
             {menuOpen && (
