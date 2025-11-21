@@ -23,7 +23,6 @@ export default function About () {
                 </div>
                 {/* right side */}
                 <div className="flex basis-3/4 bg-pink-200">
-                    <h2>Meet Ramona,</h2>
                     <p>Lorem ipsum dolor sit amet. Vel suscipit adipisci ut architecto iste et laudantium 
                     inventore! Est minus perferendis ut dignissimos dolor id molestiae cumque eum accusantium 
                     obcaecati. Rem unde voluptatem in galisum harum qui aliquid voluptates At impedit deleniti 
