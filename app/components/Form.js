@@ -4,15 +4,33 @@ import { useState } from "react";
 
 export default function Form () {
 
-    const [inputs, setInputs] = useState({});
+    function handleSubmit(e) {
+        e.preventDefault;
+    }
+
+    const [inputs, setInputs] = useState({
+        name: "",
+        subject: "",
+        email: "",
+        message: ""
+        });
+
+    const handleChange = (e) => {
+        const name = e.target.name;
+        const subject = e.target.subject;
+        const email = e.target.email;
+        const message = e.target.message;
+
+        setInputs()
+    }
 
     return (
 
-        <form className="flex flex-col bg-neutral-50">
-            <input type="text" name="name" value={inputs.name} placeholder="Name" />
-            <input type="text" placeholder="Subject" />
-            <input type="email" placeholder="your.email@mail.com" />
-            <textarea placeholder="message"></textarea>
+        <form method="post" onSubmit={handleSubmit} className="flex flex-col bg-neutral-50">
+            <input type="text" name="name" value={inputs.name} onChange={handleChange} placeholder="Name" />
+            <input type="text" name="subject" value={inputs.subject} onChange={handleChange} placeholder="Subject" />
+            <input type="email" name="email" value={inputs.email} onChange={handleChange} placeholder="your.email@mail.com" />
+            <textarea value={inputs.message} onChange={handleChange} placeholder="message"></textarea>
         </form>
         
     );
