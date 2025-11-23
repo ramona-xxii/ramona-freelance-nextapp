@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Form () {
 
     function handleSubmit(e) {
-        e.preventDefault;
+        e.preventDefault();
     }
 
     const [inputs, setInputs] = useState({
@@ -17,11 +17,10 @@ export default function Form () {
 
     const handleChange = (e) => {
         const name = e.target.name;
-        const subject = e.target.subject;
-        const email = e.target.email;
-        const message = e.target.message;
+        const value = e.target.value;
+        setInputs(values => ({ ...values, [name]: value}))
 
-        setInputs()
+       
     }
 
     return (
@@ -30,7 +29,8 @@ export default function Form () {
             <input type="text" name="name" value={inputs.name} onChange={handleChange} placeholder="Name" />
             <input type="text" name="subject" value={inputs.subject} onChange={handleChange} placeholder="Subject" />
             <input type="email" name="email" value={inputs.email} onChange={handleChange} placeholder="your.email@mail.com" />
-            <textarea value={inputs.message} onChange={handleChange} placeholder="message"></textarea>
+            <textarea name="message" value={inputs.message} onChange={handleChange} placeholder="message"></textarea>
+            <button type="submit">Send</button>
         </form>
         
     );
