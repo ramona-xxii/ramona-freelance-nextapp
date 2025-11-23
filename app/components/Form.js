@@ -4,8 +4,13 @@ import { useState } from "react";
 
 export default function Form () {
 
+    // prevent page reload after submit
     function handleSubmit(e) {
         e.preventDefault();
+
+        const {name, subject, email, message} = inputs;
+        const errors = {};
+        
     }
 
     const [inputs, setInputs] = useState({
@@ -19,8 +24,6 @@ export default function Form () {
         const name = e.target.name;
         const value = e.target.value;
         setInputs(values => ({ ...values, [name]: value}))
-
-       
     }
 
     return (
