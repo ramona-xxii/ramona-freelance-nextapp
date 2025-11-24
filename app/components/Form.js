@@ -27,13 +27,18 @@ export default function Form () {
     }
 
     return (
-
-        <form method="post" onSubmit={handleSubmit} className="flex flex-col bg-neutral-50 w-xl h-auto py-10 px-5 gap-5">
-            <input type="text" name="name" value={inputs.name} onChange={handleChange} placeholder="Name" className="bg-pink-100"/>
-            <input type="text" name="subject" value={inputs.subject} onChange={handleChange} placeholder="Subject" />
-            <input type="email" name="email" value={inputs.email} onChange={handleChange} placeholder="your.email@mail.com" />
-            <textarea name="message" value={inputs.message} onChange={handleChange} placeholder="message"></textarea>
-            <button type="submit" className="bg-cyan-300 w-fit px-5 py-2 rounded-md">Send</button>
+        <form method="post" onSubmit={handleSubmit} className="flex flex-col bg-neutral-50 w-xl h-auto py-10 px-5 gap-5 rounded-md">
+            {/** form inputs */}
+            <div className=" flex flex-col gap-5">
+                <input type="text" name="name" value={inputs.name} onChange={handleChange} placeholder="Name" className="form-input"/>
+                <input type="text" name="subject" value={inputs.subject} onChange={handleChange} placeholder="Subject" className="form-input"/>
+                <input type="email" name="email" value={inputs.email} onChange={handleChange} placeholder="youremail@email.com" className="form-input"/>
+                <textarea name="message" value={inputs.message} onChange={handleChange} placeholder="Message..." className="form-input h-36"></textarea>
+            </div>
+            {/** subit button */}
+            <div className="flex justify-center items-center">
+                <button type="submit" className="border border-solid border-neutral-500 w-fit px-5 py-2 rounded-md">Send</button>
+            </div>
         </form>
         
     );
