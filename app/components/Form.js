@@ -1,6 +1,6 @@
 'use client'
 
-import { use, useState } from "react";
+import { useState } from "react";
 
 export default function Form () {
 
@@ -10,6 +10,7 @@ export default function Form () {
     const [message, setMessage] = useState("");
 
     const onSubmit = (e) => {
+        {/* prevent default page reload on submit */}
         e.preventDefault();
         console.log('Data', name, subject, email, message)
     }
