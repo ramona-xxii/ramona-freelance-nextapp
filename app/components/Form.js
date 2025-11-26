@@ -1,39 +1,28 @@
 'use client'
 
-import { useState } from "react";
+import { use, useState } from "react";
 
 export default function Form () {
 
-    // prevent page reload after submit
-    function handleSubmit(e) {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+
+    const onSubmit = (e) => {
         e.preventDefault();
-
-        const {name, subject, email, message} = inputs;
-        const errors = {};
-        
+        console.log('Data', name, subject, email, message)
     }
-
-    const [inputs, setInputs] = useState({
-        name: "",
-        subject: "",
-        email: "",
-        message: ""
-        });
-
-    const handleChange = (e) => {
-        const name = e.target.name;
-        const value = e.target.value;
-        setInputs(values => ({ ...values, [name]: value}))
-    }
+    
 
     return (
-        <form method="post" onSubmit={handleSubmit} className="flex flex-col bg-neutral-50 w-xl h-auto py-10 px-5 gap-5 rounded-md">
+        <form method="post" onSubmit={onSubmit} className="flex flex-col bg-neutral-50 w-xl h-auto py-10 px-5 gap-5 rounded-md">
             {/** form inputs */}
             <div className=" flex flex-col gap-5">
-                <input type="text" name="name" value={inputs.name} onChange={handleChange} placeholder="Name" className="form-input"/>
-                <input type="text" name="subject" value={inputs.subject} onChange={handleChange} placeholder="Subject" className="form-input"/>
-                <input type="email" name="email" value={inputs.email} onChange={handleChange} placeholder="youremail@email.com" className="form-input"/>
-                <textarea name="message" value={inputs.message} onChange={handleChange} placeholder="Message..." className="form-input h-36"></textarea>
+                <input type="text" name="name" placeholder="Name" className="form-input" value={name} onChange={(e) => setName(e.target.value)}/>
+                <input type="text" name="subject"  placeholder="Subject" className="form-input" value={subject} onChange={(e) => setSubject(e.target.value)}/>
+                <input type="email" name="email"  placeholder="youremail@email.com" className="form-input" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <textarea name="message"  placeholder="Message..." className="form-input h-36" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
             </div>
             {/** subit button */}
             <div className="flex justify-center items-center">
