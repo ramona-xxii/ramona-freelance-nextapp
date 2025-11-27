@@ -1,1 +1,3 @@
 {menuOpen && (...)}  --> conditional rendering in React (render ONLY if menuOpen is true)
+
+SMTP -> Simple Mail Transfer Protocol
